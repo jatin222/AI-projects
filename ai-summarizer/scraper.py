@@ -20,8 +20,6 @@ def fetch_website_contents(url):
     except requests.exceptions.RequestException as e:
         return f"Could not fetch the website. Error: {e}"
 
-    print("Fetched website contents:", response.text)
-
     soup = BeautifulSoup(response.text, "html.parser")
     title = soup.title.string if soup.title else "No title found"
 

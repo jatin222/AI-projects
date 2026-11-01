@@ -15,7 +15,6 @@ Respond in markdown."""
 
 def summarize(url):
     website = fetch_website_contents(url)
-    print(website)
     
     response = client.chat.completions.create(
         model="openai/gpt-oss-120b",
